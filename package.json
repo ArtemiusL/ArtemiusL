@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "main": "packages/app/index.js",
+  "devDependencies": {
+    "lerna": "^3.5.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
