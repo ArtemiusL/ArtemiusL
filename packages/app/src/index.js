@@ -1,3 +1,8 @@
-import text from './test';
+import React from 'react';
+import { render } from 'react-dom';
+import Root from './containers/Root';
 
-document.body.innerHTML = text;
+render(
+  <Root />,
+  document.getElementById('app'),
+);
