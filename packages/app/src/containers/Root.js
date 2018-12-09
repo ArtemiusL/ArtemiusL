@@ -1,13 +1,18 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
+import { hot } from 'react-hot-loader'
+import IntlProvider from './IntlProvider'
+import Routes from './Routes'
 
-import { TestComponent } from 'atlantis-ui/src/TestComponent';
+const Root = ({ store, history }) => (
+  <Provider store={store}>
+    <IntlProvider>
+      <ConnectedRouter history={history}>
+        <Routes />
+      </ConnectedRouter>
+    </IntlProvider>
+  </Provider>
+)
 
-const Root = () => (
-  <div>
-    Hello world Artem and Anna!
-    <TestComponent />
-  </div>
-);
-
-export default hot(module)(Root);
+export default hot(module)(Root)

@@ -1,24 +1,24 @@
-import webpack from 'webpack';
+import webpack from 'webpack'
 import jssGlobal from 'jss-global'
-import jssNested from 'jss-nested';
-import jssCamelCase from 'jss-camel-case';
-import htmlTemplate from 'html-webpack-template';
+import jssNested from 'jss-nested'
+import jssCamelCase from 'jss-camel-case'
+import htmlTemplate from 'html-webpack-template'
 import autoprefixer from 'autoprefixer'
-import CssResolvePlugin from 'elementum-tools/lib/webpack/css-resolve-plugin';
+import CssResolvePlugin from 'elementum-tools/lib/webpack/css-resolve-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-export const mode = 'development';
+export const mode = 'development'
 
 export const entry = [
   '@babel/polyfill',
   './src/index',
-];
+]
 
 export const output = {
   filename: '[name].js',
   publicPath: '/',
   path: '/',
-};
+}
 
 export const module = {
   rules: [
@@ -99,13 +99,13 @@ export const module = {
       loader: 'file-loader?name=[name].[ext]',
     },
   ],
-};
+}
 
 export const resolve = {
   plugins: [
     new CssResolvePlugin(),
   ],
-};
+}
 
 export const plugins = [
   new HtmlWebpackPlugin({
@@ -133,4 +133,4 @@ export const plugins = [
       },
     },
   }),
-];
+]

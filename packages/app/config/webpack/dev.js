@@ -1,2 +1,3 @@
-require('@babel/register')();
+require('@babel/register')()
+
 module.exports = require('./dev.babel.js')
