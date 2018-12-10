@@ -120,7 +120,7 @@ export const plugins = [
     appMountId: 'app',
   }),
   new webpack.DefinePlugin({
-    'process.env.API_URL': JSON.stringify(process.env.API_URL),
+    __DEV__: true,
   }),
   new webpack.LoaderOptionsPlugin({
     options: {
